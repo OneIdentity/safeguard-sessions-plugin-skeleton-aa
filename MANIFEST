@@ -1,0 +1,10 @@
+name: SPS_AA_Skeleton
+description: This is an example Python3 AA plugin
+version: 1.0.0
+type: aa
+api: 1.1
+entry_point: main.py
+# scb_min_version: 5.10.0
+# The tilde at the end means less then 5.11.0
+# scb_max_version: 5.11.0~
+

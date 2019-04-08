@@ -1,0 +1,11 @@
+[packages]
+# List packages needed at runtime, except plugin sdk.
+
+[dev-packages]
+"flake8" = "*"
+pytest = "*"
+pytest-cov = "*"
+# List packages needed at runtime, copy of the list above in [packages]
+
+[requires]
+python_version = "3.6"
