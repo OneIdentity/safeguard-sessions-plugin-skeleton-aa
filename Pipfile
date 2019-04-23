@@ -7,11 +7,7 @@
 # available during development and testing.
 # These packages will NOT be copied into the ZIP distribution.
 
-
 # Basic packages needed for build and testing:
-"flake8" = "*"
-pytest = "*"
-pytest-cov = "*"
 # Implicit: oneidentity-safeguard-sessions-plugin-sdk = "*"
 
 [requires]
