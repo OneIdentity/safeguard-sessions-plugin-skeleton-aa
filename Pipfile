@@ -8,7 +8,7 @@
 # These packages will NOT be copied into the ZIP distribution.
 
 # Basic packages needed for build and testing:
-# Implicit: oneidentity-safeguard-sessions-plugin-sdk = "*"
+oneidentity-safeguard-sessions-plugin-sdk = ">=1.1,<1.2"
 
 [requires]
 python_version = "3.6"
