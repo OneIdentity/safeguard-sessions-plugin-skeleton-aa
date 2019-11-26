@@ -1,8 +1,9 @@
 from ...plugin_bare import Plugin
 
+
 def test_authenticate_denies():
-    config=''
-    parameters=dict(
+    config = ''
+    parameters = dict(
         cookie={},
         session_cookie={},
         gateway_user='somebody',
