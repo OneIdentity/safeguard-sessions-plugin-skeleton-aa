@@ -2,13 +2,13 @@ from ...plugin_bare import Plugin
 
 
 def test_authenticate_denies():
-    config = ''
+    config = ""
     parameters = dict(
         cookie={},
         session_cookie={},
-        gateway_user='somebody',
-        key_value_pairs={'otp': ''},
+        gateway_user="somebody",
+        key_value_pairs={"otp": ""},
     )
 
     result = Plugin(config).authenticate(**parameters)
-    assert result['verdict'] == 'ACCEPT'
+    assert result["verdict"] == "ACCEPT"
