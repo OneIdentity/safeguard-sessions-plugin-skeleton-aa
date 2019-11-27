@@ -24,10 +24,10 @@ from safeguard.sessions.plugin import AAPlugin, AAResponse
 
 class Plugin(AAPlugin):
     def do_authenticate(self):
-        return AAResponse.accept('the reason to accept')
+        return AAResponse.accept("the reason to accept")
 
     def do_authorize(self):
-        return AAResponse.accept('the reason to accept')
+        return AAResponse.accept("the reason to accept")
 
     def do_session_ended(self):
         pass
