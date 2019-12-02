@@ -1,0 +1,24 @@
+#!/bin/sh
+
+rootdir=$(git rev-parse --show-toplevel)
+
+cd $rootdir/coding-standards
+
+if ! pipenv run flake8 --help >>/dev/null 2>&1; then
+	pipenv sync
+fi
+
+if ! pipenv run black --check --exclude="/(\.git|build|dist|debian)/" --line-length=120 .. >>/dev/null 2>&1; then
+	echo "Please format your files with black before commiting"
+        echo "  pipenv run black --exclude='/(\.git|build|dist|debian)/' --line-length=120 $rootdir"
+        exit 1
+fi
+
+if ! pipenv run flake8 --max-line-length=120 .. >>/dev/null 2>&1; then
+	echo "Please make sure that your code is flake8 compliant"
+	echo "  pipenv run flake8 --max-line-length=120 $rootdir"
+	exit 1	
+fi
+
+exit 0
+

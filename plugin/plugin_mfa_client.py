@@ -27,9 +27,7 @@ class Plugin(AAPlugin):
     def do_authenticate(self):
         # This is glue code to instantiate an MFAClient and execute it
         client = MyClient.from_config(self.plugin_configuration)
-        return client.execute_authenticate(
-            self.username, self.mfa_identity, self.mfa_password
-        )
+        return client.execute_authenticate(self.username, self.mfa_identity, self.mfa_password)
 
 
 class MyClient(MFAClient):
