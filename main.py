@@ -22,8 +22,10 @@
 #
 
 
+
+
 # To get a bare bones AAPlugin example use this line:
 from plugin.plugin_bare import Plugin  # noqa: F401
-
+import os
 # To get an MFAClient based example use this line:
 # from plugin.plugin_mfa_client import Plugin  # noqa: F401
