@@ -33,17 +33,17 @@ class Plugin(AAPlugin):
 class MyClient(MFAClient):
     def __init__(self, server_url=None):
         self.server_url = server_url
-        super().__init__(branded_name='SPS AA Skeleton')
+        super().__init__(branded_name="SPS AA Skeleton")
 
     @classmethod
-    def from_config(cls, plugin_configuration, section='skeleton'):
+    def from_config(cls, plugin_configuration, section="skeleton"):
         # It is good practice to separate configuration handling in its own function
-        return cls(server_url=plugin_configuration.get(section, 'server_url'))
+        return cls(server_url=plugin_configuration.get(section, "server_url"))
 
     def otp_authenticate(self, username, otp):
-        if otp == '1234':
+        if otp == "1234":
             # The code may return an AAResponse (dict) which will be passed through to SPS
-            return AAResponse.need_info('Are you sure?', 'confirm')
+            return AAResponse.need_info("Are you sure?", "confirm")
         else:
             # Contact the service at self.server_url and actually check the OTP
             # Returning True means returning ACCEPT as verdict
