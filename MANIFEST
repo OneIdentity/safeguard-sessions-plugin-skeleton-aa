@@ -1,6 +1,6 @@
 name: SPS_AA_Skeleton
 description: This is an example Python3 AA plugin
-version: 1.0.0
+version: 1.1.0
 type: aa
 api: 1.1
 entry_point: main.py
