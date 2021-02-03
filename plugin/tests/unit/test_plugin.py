@@ -1,6 +1,6 @@
 from ...plugin_bare import Plugin
 
-def test_authenticate_denies():
+def test_authenticate_accepts():
     config=''
     parameters=dict(
         cookie={},

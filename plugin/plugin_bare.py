@@ -23,6 +23,13 @@ from safeguard.sessions.plugin import AAPlugin, AAResponse
 
 
 class Plugin(AAPlugin):
+
+    def _extract_mfa_password(self):
+        if self.plugin_configuration.getboolean("skeleton", "ask_pass", default=True):
+            return super()._extract_mfa_password()
+        else:
+            return 'can pass'
+
     def do_authenticate(self):
         return AAResponse.accept('the reason to accept')
 
