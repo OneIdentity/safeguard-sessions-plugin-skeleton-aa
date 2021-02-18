@@ -2,7 +2,7 @@ name: SPS_AA_Skeleton
 description: This is an example Python3 AA plugin
 version: 1.1.0
 type: aa
-api: 1.1
+api: 1.4
 entry_point: main.py
 author_name: One Identity PAM Integration Team
 author_email: QDL.QBU-OI.RD.Safeguard.Integration@oneidentity.com
